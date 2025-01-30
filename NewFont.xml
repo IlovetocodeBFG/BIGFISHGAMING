@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="BFG"/>
+<Content type="html"><![CDATA[
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -265,3 +270,6 @@
     </script>
 </body>
 </html>
+    ]]></Content>
+</Module>
+
