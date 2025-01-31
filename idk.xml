@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="BFG"/>
+<Content type="html"><![CDATA[
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games</title>
+
+    <!-- Add the Boogaloo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            font-family: 'Boogaloo', cursive;
+            color: #f5f5f5;
+        }
+
+        h1.title {
+            text-align: center;
+            color: #1abc9c;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .category-banner {
+            background-color: #16a085;
+            color: #fff;
+            padding: 12px;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .info, .description, .credit {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        .description {
+            font-style: italic;
+            color: #bdc3c7;
+        }
+
+        .credit {
+            color: #95a5a6;
+            margin-top: 40px;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .image-container img {
+            border-radius: 12px;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #games {
+            width: 85%;
+            margin: 80px auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 20px;
+        }
+
+        #games a {
+            width: calc(25% - 1.5rem);
+            aspect-ratio: 1;
+            border-radius: 1vw;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
+            background: #2a2a2a;
+        }
+
+        #games a:hover {
+            cursor: pointer;
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        #games img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .copyright i {
+            color: #1a56db;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="title">Main Games</h1>
+
+        <div class="category-banner">Unblocked Games</div>
+
+        <div class="info">Get some great game sites, by PulseCodes and Bigfishgaming<br><br>New Update: Alot Of New Games Added! Also Rework on Classroom gg Enjoy :)</div>
+
+        <div class="description">The password for "BigFishGaming" is <strong>bfg</strong> (all lowercase).</div>
+
+        <div class="credit">Developed by Pulsecodes & BigFishGaming</div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2025 BFG Games. All rights reserved.</p>
+            <p>Unauthorized use or reproduction of this content is strictly prohibited and may result in legal action.</p>
+        </div>
+    </footer>
+</body>
+</html>
+]]></Content>
+</Module>
