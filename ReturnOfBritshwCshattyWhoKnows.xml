@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCW</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap">
+    <style>
+      <--I Hope you like this bro LONG LIVE BCW FROM BIGFISHGAMING!-->
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://64.media.tumblr.com/d60fa89a6c6ef6b51790a079d7204540/f145147b69889cf3-a3/s640x960/1d7480b51aa3c7cfc46d85641dfd9f759eeadd95.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Varela Round', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 100px;
+            font-size: 36px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #007FFF, #324AB2);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #games a {
+            width: 14vw;
+            height: 14vw;
+            border-radius: 1vw;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
+            background: #2a2a2a;
+        }
+
+        #games a:hover {
+            cursor: pointer;
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        #games img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-wrapper {
+            position: relative;
+            padding-top: 200px;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            #games {
+                width: 90%;
+            }
+            #games a {
+                width: calc(33.33% - 20px);
+                height: auto;
+                aspect-ratio: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>British-Chatty Games:</h1>
+    <div id="games" class="game-list"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://cdn.jsdelivr.net/gh/IlovetocodeBFG/BIGFISHGAMING@refs/heads/main/gamelist.txt')
+                .then(response => response.text())
+                .then(data => {
+                    let gameGrid = document.getElementById('games');
+                    if (!gameGrid) {
+                        gameGrid = document.createElement('div');
+                        gameGrid.id = 'games';
+                        document.body.appendChild(gameGrid);
+                    }
+
+                    gameGrid.innerHTML = data;
+
+                    const games = document.querySelectorAll('#games a');
+
+                    games.forEach(game => {
+                        game.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const url = game.getAttribute('data-url');
+
+                            const win = window.open('about:blank', '_blank');
+
+                            win.document.write(`
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <title>BritishChatty</title>
+                                    <link rel="icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://clever.com&size=64" type="image/x-icon">
+                                    <style>
+                                        body, html {
+                                            margin: 0;
+                                            padding: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            overflow: hidden;
+                                            background: #000;
+                                        }
+                                        iframe {
+                                            width: 100%;
+                                            height: 100%;
+                                            border: none;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <iframe src="${url}" allowfullscreen></iframe>
+                                </body>
+                                </html>
+                            `);
+                            win.document.close();
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading games:', error);
+                });
+        });
+    </script>
+</body>
+</html>
